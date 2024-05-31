@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        .about-me, .cv {
+            display: none;
+        }
+        .about-me.active, .cv.active {
+            display: block;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Professional Profile</h1>
+    </header>
+    <nav>
+        <a href="#about-me" onclick="showSection('about-me')">About Me</a>
+        <a href="#cv" onclick="showSection('cv')">CV</a>
+    </nav>
+    <div class="container">
+        <section id="about-me" class="about-me active">
+            <h2>About Me</h2>
+            <p>Welcome to my professional profile. I am a PhD student graduating next year with a focus on microrobotics for targeted drug delivery and micro-manipulation. My skills include microfabrication, microprinting, microassembly, and magnetic manipulation. I am passionate about advancing the field of microrobotics and am looking forward to contributing to innovative projects in the future.</p>
+        </section>
+        <section id="cv" class="cv">
+            <h2>CV</h2>
+            <p>You can download my CV <a href="Aaron_CV_2024May.pdf" target="_blank">here</a>.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.container section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
